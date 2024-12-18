@@ -32,41 +32,227 @@
 
 <body class="index-page">
 
-  
+  <!-- Scrolling message -->
+<div class="scrolling-message">
+  <span>أهلًا وسهلًا بكم هذا الموقع اهداء من المستشار صالح ناصر آل عبدالواحد لقبيلة آل كثير</span>
+</div>
 
 
 
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<style>
+  /* Basic Navbar Styling */
+  .seebar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: nowrap; /* Keep content in one line for desktop and tablets */
+  }
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        
-        <div class="logo-container">
-          <img src="saleh new.jpeg" alt="Logo">
-          <p>المؤسس</p>
-          <p><b> المستشار صالح ناصر ال عبدالواحد</b></p>
-      </div>
+  /* Image Styling with Decent Size */
+  .see-logo img,
+  .center-image img,
+  .log-container img {
+      height: 300px; /* Resize images */
+      width: auto; /* Maintain aspect ratio */
+      display: block;
+      border-radius: 15px; /* Rounded corners for images */
+  }
 
-      <div class="middle-text">
-        <span>موقع هدية </span>   من المستشار صالح ناصر ال عبدالواحد لقبيلة ال كثير
-    </div>
+  .right-button{
+    left: 100px;
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    background-color: #056518;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
 
-    <div>
-      <img class="navlogo" src="Artboard 2 co 2.png" alt="">
-    </div>
-       
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
-      </a>
+  /* Middle Image Centering */
+  .center-image {
+      flex: 1; /* Take up available space */
+      text-align: center;
+  }
 
-      
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        
-      </nav>
-    
+  /* Middle Image Adjustments */
+  .center-image img {
+      display: inline-block;
+      border-radius: 20px;
+      height: 300px;
+      transition: transform 0.5s ease-in-out;
+  }
 
+  .center-image img:hover {
+      transform: rotate(360deg); /* Full rotation on hover */
+  }
+
+  /* Logo Container */
+  .log-container {
+      text-align: center;
+  }
+
+  .log-container img {
+      margin-bottom: 10px;
+  }
+
+  .log-container .text {
+      font-size: 16px; /* Arabic text size */
+      color: #333;
+      direction: rtl;
+      white-space: nowrap;
+      margin-top: 5px;
+  }
+
+  /* Button Styling */
+  .log-container .login-button,
+  .see-logo .new-button {
+      display: inline-block;
+      background-color: #056518;
+      color: white;
+      font-size: 14px;  /* Adjust button text size */
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+  }
+
+  .log-container .login-button:hover,
+  .see-logo .new-button:hover {
+      background-color: #0056b3;
+  }
+
+  /* Responsive Design (Mobile View Adjustments) */
+  @media (max-width: 768px) {
+      /* Ensuring Navbar is aligned in one line */
+      .seebar {
+          justify-content: center;
+          padding: 10px; /* Adjust padding for smaller screens */
+      }
+
+      /* Ensure the logo is properly aligned in the center with button */
+      .see-logo {
+          display: flex;
+          flex-direction: column; /* Stack the logo and button vertically */
+          align-items: center;
+          justify-content: center;
+      }
+
+      .see-logo img {
+          height: 120px; /* Smaller logo size for mobile */
+          margin-bottom: 5px; /* Space between the logo and new button */
+      }
+
+      .see-logo .new-button {
+          font-size: 12px; /* Smaller button text */
+          padding: 6px 12px; /* Smaller padding */
+      }
+
+      .center-image img {
+          height: 120px; /* Center image smaller size for mobile */
+          margin-top: 10px; /* Top margin for separation */
+      }
+
+      /* Adjust the log container for a mobile-friendly layout */
+      .log-container {
+          display: flex;
+          flex-direction: column;  /* Stack text and button vertically */
+          align-items: center;     /* Center elements horizontally */
+          margin-top: 15px;        /* Separation from center image */
+      }
+
+      .log-container img {
+          height: 80px; /* Smaller image size for mobile */
+          margin-bottom: 5px; /* Space between image and text */
+      }
+
+      .log-container .text {
+          font-size: 14px; /* Adjust text size for mobile */
+          margin-bottom: 5px;
+          text-align: center; /* Center-align text */
+      }
+
+      .log-container .login-button {
+          font-size: 12px;
+          padding: 6px 12px; /* Button size adjustments for mobile */
+          margin-top: 5px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .seebar {
+          padding: 5px;  /* Adjust padding for smaller mobile screens */
+      }
+
+      .see-logo img {
+          height: 100px; /* Logo size for very small screens */
+      }
+
+      .center-image img {
+          height: 100px;  /* Smaller center image size */
+      }
+
+      .log-container img {
+          height: 60px; /* Smaller log container image */
+      }
+
+      .log-container .text {
+          font-size: 12px;  /* Small font size for text */
+      }
+
+      .log-container .login-button {
+          font-size: 10px;
+          padding: 4px 8px;  /* Adjust smaller button size */
+
+      }
+      .right-button{
+    left: 5px;
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    background-color: #056518;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  }
+</style>
+</head>
+<body>
+<nav class="seebar">
+  <div class="see-logo">
+      <img src="Artboard 2 co 2.png" alt="see Logo">
+      <a class="right-button" href="ihdafa.pdf">اهدافنا</a> <!-- New Button Below Logo -->
   </div>
-</header>
+  <div class="center-image">
+      <img src="pexels-enginakyurt-15483696.jpg" alt="center Image">
+  </div>
+  <div class="log-container">
+      <img src="saleh new.jpeg" alt="Log Container">
+      <div class="text">المؤسس<br>المستشار صالح ناصر ال عبدالواحد</div>
+      <a class="login-button" href="register.html">تسجيل الدخول</a>  <!-- Login button below text -->
+  </div>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
 
 <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
   <div class="container position-relative">
@@ -81,101 +267,515 @@
   </div>
 </div>
 
-
-
 <style>
-       
-    
-  .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
-      gap: 20px; /* Spacing between items */
+
+  .hname{
+    color: azure;
   }
 
-  .gallery-item {
-      position: relative;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden; /* Keeps media inside the container */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%; /* Ensures items adjust to grid size */
-      height: 300px; /* Set a fixed height for uniform display */
+  .grid-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .gallery-item img,
-  .gallery-item video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%; /* Ensure media fills the container */
-      height: 100%; /* Stretch to container height */
-      object-fit: cover; /* Maintains aspect ratio while filling container */
-      border-radius: 8px;
-      cursor: pointer;
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* This ensures a square aspect ratio */
+    border-radius: 10px;
   }
 
-  .delete-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+  .grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
 
-  #modal {
+  .grid-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .grid-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+  }
+
+  .grid-item:hover .overlay {
+    opacity: 1;
+  }
+
+  .grid-item .overlay h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .grid-item .overlay p {
+    font-size: 14px;
+  }
+
+  /* Ensure last two items are centered */
+  .grid-container > :nth-last-child(2),
+  .grid-container > :last-child {
+    grid-column: span 1; /* Ensure they don't span extra columns */
+    justify-self: center; /* Center-align last two elements */
+  }
+  .modal {
       display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
-  }
+      z-index: 10;
+    }
 
-  #modalContent {
-      max-width: 80%;
-      max-height: 80%;
-  }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
 
-  .close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #fff;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
+    .modal:target {
       display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+    }
 </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-14 at 11.51.50.jpeg" alt="Person 6">
+    <div class="overlay">
+      <h3 class="hname">الشيخ / محمد أحمد ردفان
+        شيخ قبيلة آل كثير
+        </h3>
+      <p>قرية : الاصادعة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/22.jpeg" alt="Person 1">
+    <div class="overlay">
+      <h3 class="hname">الكابتن طيار حربي العميد / عايض بن صالح بن عايض آل بن تركية
+        صورة مع المغفور له باذن الله الملك فهد بن عبدالعزيز رحمه الله
+        </h3>
+      <p>قرية : إل غراب</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-13 at 14.31.56.jpeg" alt="Person 1">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ موسى عساف حيان آل حيان</h3>
+      <p>قرية : آل خريم</p>
+    </div>
+  </div>
+  
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-13 at 15.24.30.jpeg" alt="Person 2">
+    <div class="overlay">
+      <h3 class="hname">الملازم أول الدكتور خالد صالح على غرم الله الـ محمد 
+      </h3>
+      <p>قرية : ال عتمة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-13 at 16.02.41.jpeg" alt="Person 3">
+    <div class="overlay">
+      <h3 class="hname">العميد /  عبدالله صالح علوان آل علوان</h3>
+      <p>قرية : ال عتمه</p>
+
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-13 at 20.47.11.jpeg" alt="Person 4">
+    <div class="overlay">
+      <h3 class="hname">اللواء: مصلح غيثان مصلح آل عيسى 
+      </h3>
+      <p>قرية : آل غراب</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-14 at 01.25.47.jpeg" alt="Person 5">
+    <div class="overlay">
+      <h3 class="hname">عقيد : محمد علي موسى آل موسى
+      </h3>
+      <p>قرية : آل طارق</p>
+    </div>
+  </div>
+  
+  <div class="grid-item">
+    <img src="members/WhatsApp Image 2024-12-14 at 12.03.52.jpeg" alt="Person 7">
+    <div class="overlay">
+      <h3 class="hname">العقيد / مستور محمد حيان آل حيان 
+      </h3>
+      <p>القرية : آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/sayed.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / سعيد محمد أحمد ردفان آل جمعان 
+      </h3>
+      <p>القرية : الاصادعة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/ahmed.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الدكتور احمد عبدالله علي آل بوشمال 
+      </h3>
+      <p>قرية آل عتمة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/moosi.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">اللواء / موسى عوض محمد آل بوشمال 
+      </h3>
+      <p>قرية : آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/1.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">القافز الحر مضلي / علي حمدان عايض آل شدنه 
+
+      </h3>
+      <p>قرية : الاصادعة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/2.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الدكتور / محمد علي شعبان آل بوشمال 
+
+      </h3>
+      <p>قرية : آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/11.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الشاعر /عيدان شرقي محمد آل حسن 
+      </h3>
+      <p>القرية :الزبيري</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/3.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">اللواء / طلال علي مقيبل ال مداوس 
+      </h3>
+      <p>قرية : الاصادعة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/4.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المهندس / نايف احمد موسى آل بوشمال
+      </h3>
+      <p>قرية : آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/5.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">عقيد طيار ركن / مازن عساف مستور آل حيان 
+      </h3>
+      <p>قرية آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/6.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الدكتور / موسى بن غيثان بن أحمد آل محمد 
+      </h3>
+      <p>قرية آل طارق</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/8.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">أمام وخطيب جامع آل عتمة الاستاذ / صالح زاهر علوان آل علوان 
+      </h3>
+      <p>قرية : العتمة</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/9.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الدكتور / مصلح عايض مصلح آل عيسى 
+      </h3>
+      <p>قرية : آل غراب</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/10.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المدرب الاستاذ / عايض موسى عايض آل موسى 
+      </h3>
+      <p>قرية : آل غراب</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/23.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">العميد /أحمد عوض أحمد آل موسى 
+      </h3>
+      <p>قرية : آل غراب</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/24.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / علي أحمد عيدان آل عبدالمطلب 
+      </h3>
+      <p>قرية : الوقر</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/25.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الدكتور / سعد مستور حيان آل حيان 
+      </h3>
+      <p>قرية : آل خريم      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/26.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المحامي / علي طلال علي آل مداوس
+      </h3>
+      <p>قرية : الاصادعة      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/27.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">النقيب / عادل عبدالعزيز صالح آل عساف 
+      </h3>
+      <p>قرية : المرباء</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/28.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المهندس / اسامة محمد حاضر آل حيان 
+      </h3>
+      <p>قرية : آل خريم      </p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/29.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المحامي / مصعب سعد مستور آل حيان
+      </h3>
+      <p>قرية : آل خريم</p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/30.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / مناع عثمان مثيب آل جمعان
+        الاصادعة
+      </h3>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/31.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ/ محمدبن عبد الله ظافر ال ظافر 
+      </h3>
+      <p>قرية : البخرة</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/32.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / علوان صالح علي آل علوان 
+      </h3>
+      <p>قرية : العتمة      </p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <img src="members/33.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / عايض محمد أحمد ردفان آل جمعان
+      </h3>
+      <p>قرية : الاصادعة</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/34.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">المحامي / مراد علي محمد آل سعيد 
+      </h3>
+      <p>قرية : آل غراب      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/35.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / مطلق أحمد عساف آل حيان 
+      </h3>
+      <p>قرية : آل خريم      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/36.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ/ حميد صالح عبدالله آل شهوان 
+      </h3>
+      <p>قرية : آل حفيش</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/37.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / علي عبدالله علي آل عبدالواحد
+      </h3>
+      <p>قرية : آل خريم      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/38.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ/ صالح عبدالله محمد آل شهوان 
+      </h3>
+      <p>قرية : منيفه</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/39.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">سعيد موسى عبدالله جحران ال سعيد 
+      </h3>
+      <p>القرية ال غراب      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/40.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الاستاذ / عوض صالح علي ال بن محفوظه
+      </h3>
+      <p>قرية : آل غراب      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/41.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">
+        طيار الاستعراض الجوي  رحال آل كثير /
+        أحمد محمد هدية آل حوته
+      </h3>
+      <p>القرية : آل طارق      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/42.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">رجل الأعمال/ علي هادي محمد آل حبشان
+      </h3>
+      <p>قرية : إل حفيش      </p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/43.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">صالح عساف صالح آل عدوان 
+      </h3>
+      <p>قرية : الزبيري</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/44.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الأستاذ / صالح حسين علي آل مشول
+      </h3>
+      <p>قرية : آل مشول</p>
+    </div>
+  </div>
+
+  <div class="grid-item">
+    <img src="members/7.jpeg" alt="Person 8">
+    <div class="overlay">
+      <h3 class="hname">الشاعر / رائد عيدان شرقي آل حسن 
+      </h3>
+      <p>قرية : الزبيري</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal1" class="modal">
+  <img src="https://via.placeholder.com/300" alt="Person 1">
+</div>
+
+<div id="modal2" class="modal">
+  <img src="https://via.placeholder.com/300" alt="Person 2">
+</div>
+
+<script>
+  // Script for enabling modal popup
+  document.querySelectorAll('.grid-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const modalId = this.getAttribute('data-target');
+      document.getElementById(modalId).style.display = 'flex';
+    });
+  });
+
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', function () {
+      this.style.display = 'none';
+    });
+  });
+</script>
 
 </head>
 <body>
 
-<input type="file" id="fileInput" accept="image/*,video/*">
-<button id="addButton">Add to Gallery</button>
-<div class="gallery" id="gallery"></div>
-<div id="modal">
-  <button class="close">&times;</button>
-  <div id="modalContent"></div>
-</div>
 <script src="script2.js"></script>
 <footer id="footer" class="footer dark-background">
 

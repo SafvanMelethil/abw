@@ -31,45 +31,228 @@
 </head>
 
 <body class="index-page">
-
-   <!-- Scrolling message -->
-   <div class="scrolling-message">
-    <span>أهلاً بكم في الصفحة الرسمية للمستشار صالح ناصر العبد الواحد</span>
+  
+<!-- Scrolling message -->
+<div class="scrolling-message">
+  <span>أهلًا وسهلًا بكم هذا الموقع اهداء من المستشار صالح ناصر آل عبدالواحد لقبيلة آل كثير</span>
 </div>
 
 
 
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<style>
+  /* Basic Navbar Styling */
+  .seebar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: nowrap; /* Keep content in one line for desktop and tablets */
+  }
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        
-        <div class="logo-container">
-          <img src="saleh new.jpeg" alt="Logo">
-          <p>المؤسس</p>
-          <p><b> المستشار صالح ناصر ال عبدالواحد</b></p>
-      </div>
+  /* Image Styling with Decent Size */
+  .see-logo img,
+  .center-image img,
+  .log-container img {
+      height: 300px; /* Resize images */
+      width: auto; /* Maintain aspect ratio */
+      display: block;
+      border-radius: 15px; /* Rounded corners for images */
+  }
 
-      <div class="middle-text">
-        <span>موقع هدية </span>   من المستشار صالح ناصر ال عبدالواحد لقبيلة ال كثير
-    </div>
-       
+  .right-button{
+    left: 100px;
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    background-color: #056518;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
 
-    <div>
-      <img class="navlogo" src="Artboard 2 co 2.png" alt="">
-    </div>
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
-      </a>
+  /* Middle Image Centering */
+  .center-image {
+      flex: 1; /* Take up available space */
+      text-align: center;
+  }
 
-      
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        
-      </nav>
-    
+  /* Middle Image Adjustments */
+  .center-image img {
+      display: inline-block;
+      border-radius: 20px;
+      height: 300px;
+      transition: transform 0.5s ease-in-out;
+  }
 
+  .center-image img:hover {
+      transform: rotate(360deg); /* Full rotation on hover */
+  }
+
+  /* Logo Container */
+  .log-container {
+      text-align: center;
+  }
+
+  .log-container img {
+      margin-bottom: 10px;
+  }
+
+  .log-container .text {
+      font-size: 16px; /* Arabic text size */
+      color: #333;
+      direction: rtl;
+      white-space: nowrap;
+      margin-top: 5px;
+  }
+
+  /* Button Styling */
+  .log-container .login-button,
+  .see-logo .new-button {
+      display: inline-block;
+      background-color: #056518;
+      color: white;
+      font-size: 14px;  /* Adjust button text size */
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+  }
+
+  .log-container .login-button:hover,
+  .see-logo .new-button:hover {
+      background-color: #0056b3;
+  }
+
+  /* Responsive Design (Mobile View Adjustments) */
+  @media (max-width: 768px) {
+      /* Ensuring Navbar is aligned in one line */
+      .seebar {
+          justify-content: center;
+          padding: 10px; /* Adjust padding for smaller screens */
+      }
+
+      /* Ensure the logo is properly aligned in the center with button */
+      .see-logo {
+          display: flex;
+          flex-direction: column; /* Stack the logo and button vertically */
+          align-items: center;
+          justify-content: center;
+      }
+
+      .see-logo img {
+          height: 120px; /* Smaller logo size for mobile */
+          margin-bottom: 5px; /* Space between the logo and new button */
+      }
+
+      .see-logo .new-button {
+          font-size: 12px; /* Smaller button text */
+          padding: 6px 12px; /* Smaller padding */
+      }
+
+      .center-image img {
+          height: 120px; /* Center image smaller size for mobile */
+          margin-top: 10px; /* Top margin for separation */
+      }
+
+      /* Adjust the log container for a mobile-friendly layout */
+      .log-container {
+          display: flex;
+          flex-direction: column;  /* Stack text and button vertically */
+          align-items: center;     /* Center elements horizontally */
+          margin-top: 15px;        /* Separation from center image */
+      }
+
+      .log-container img {
+          height: 80px; /* Smaller image size for mobile */
+          margin-bottom: 5px; /* Space between image and text */
+      }
+
+      .log-container .text {
+          font-size: 14px; /* Adjust text size for mobile */
+          margin-bottom: 5px;
+          text-align: center; /* Center-align text */
+      }
+
+      .log-container .login-button {
+          font-size: 12px;
+          padding: 6px 12px; /* Button size adjustments for mobile */
+          margin-top: 5px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .seebar {
+          padding: 5px;  /* Adjust padding for smaller mobile screens */
+      }
+
+      .see-logo img {
+          height: 100px; /* Logo size for very small screens */
+      }
+
+      .center-image img {
+          height: 100px;  /* Smaller center image size */
+      }
+
+      .log-container img {
+          height: 60px; /* Smaller log container image */
+      }
+
+      .log-container .text {
+          font-size: 12px;  /* Small font size for text */
+      }
+
+      .log-container .login-button {
+          font-size: 10px;
+          padding: 4px 8px;  /* Adjust smaller button size */
+
+      }
+      .right-button{
+    left: 5px;
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    background-color: #056518;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  }
+</style>
+</head>
+<body>
+<nav class="seebar">
+  <div class="see-logo">
+      <img src="Artboard 2 co 2.png" alt="see Logo">
+      <a class="right-button" href="ihdafa.pdf">اهدافنا</a> <!-- New Button Below Logo -->
   </div>
-</header>
+  <div class="center-image">
+      <img src="pexels-enginakyurt-15483696.jpg" alt="center Image">
+  </div>
+  <div class="log-container">
+      <img src="saleh new.jpeg" alt="Log Container">
+      <div class="text">المؤسس<br>المستشار صالح ناصر ال عبدالواحد</div>
+      <a class="login-button" href="register.html">تسجيل الدخول</a>  <!-- Login button below text -->
+  </div>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
 
 <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
   <div class="container position-relative">

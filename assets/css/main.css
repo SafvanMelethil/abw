@@ -464,13 +464,13 @@ form button:hover {
 }
 
 /* Colors for tabs */
-.green { background-color: violet; }
-.light-green { background-color: indigo; }
-.neon-green { background-color: brown; }
+.green { background-color: blue; }
+.light-green { background-color: rgb(203, 19, 19); }
+.neon-green { background-color:#757e75; }
 .brown { background-color: blue; }
-.dark-brown { background-color: green; }
-.gold { background-color: rgb(200, 200, 26); }
-.blue { background-color: orange; }
+.dark-brown { background-color: #757e75; }
+.gold { background-color: rgb(203, 19, 19); }
+.blue { background-color: #000bff; }
 
 
 /* Dropdown menu styles */
@@ -1886,6 +1886,8 @@ section, .section {
   margin-bottom: 30px;
 }
 
+
+
 .team .person img {
   transition: 0.3s all ease;
 }
@@ -3100,140 +3102,6 @@ section, .section {
 }
 
 
-@media only screen and (max-width: 430px) {
-  .tab{
-    flex: 1;
-    text-align: center;
-    position: relative;
-    font-size: 8px;
-  }
-
-  .middle-text{
-    font-family: 'DroidArabicKufiRegular';
-    font-weight: bold;
-    position: static;
-    font-size: 10px;
-  
-    text-align: center;
-    color: #ae0000;
-  
-  }
-
-  .logo-container p{
-    position: relative;
-    margin: 0;
-    font-size: 10px;
-    left: 18px;
-  }
-
-  .logo-container img{
-    position: relative;
-    left: 20px;
-    width: 70%;
-    height: 40%;
-    border-radius: 10%;
-    object-fit: cover;
-    margin-bottom: 5px;
-  }
-  .navmenu a, .navmenu a:focus{
-  color: var(--nav-dropdown-color);
-  font-family: var(--nav-font);
-  font-size: 10px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  white-space: nowrap;
-  transition: 0.3s;
-
-  }
-  .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
-    display: none;
-    font-family: bootstrap-icons !important;
-    font-style: normal;
-    font-weight: normal !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: -.125em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.upload-trigger {
-  position: relative;
-  left: 117%;
-  border-radius: 15px;
-  background-color: #000000;
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  width: 300px; /* Optional: Set a width */
-  height: 300px; /* Optional: Set a height */
-  text-align: center; /* Center text content */
-  display: grid;
-}
-.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
-  display: inline-block;
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  vertical-align: -.125em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.button{
-  background-color: #ffffff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 20PX;
-
-    transition: background-color 0.3s ease;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns content to the right */
-  padding: 20px; /* Adds spacing around the button */
-}
-
-.right-button {
-    position: absolute;
-    bottom: -23%;
-    left: 69%;
-    background-color: #0daa1a;
-    color: #ffffff;
-    border: none;
-    padding: 0px 2px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.right-button:hover {
-  background-color: #74b9fd; /* Darker shade on hover */
-}
-
-.navlogo{
-  position: relative;
-  width: 81%;
-  top: 5px;
-  right: 213%;
-}
-
-}
-
 
 @media only screen and (min-width: 768px) {
   .tab{
@@ -3653,21 +3521,20 @@ section, .section {
 
 }
 
-
-@media only screen and (max-width: 425px) {
+@media only screen and (min-width: 375px) {
   .tab{
     flex: 1;
     text-align: center;
     position: relative;
-    font-size: 9px;
+    font-size: 5px;
   }
 
   .middle-text{
     font-family: 'DroidArabicKufiRegular';
     font-weight: bold;
-    position: relative;
-    font-size: 15px;
-  
+    position: absolute;
+    font-size: 6px;
+    left: 111px;
     text-align: center;
     color: #ae0000;
   
@@ -3764,12 +3631,12 @@ section, .section {
 
 .right-button {
   position: absolute; /* Positioning relative to the container */
-  bottom: -32%; /* Distance from the bottom of the container */
-  left: 69%; /* Distance from the left of the container */
+  bottom: -17%; /* Distance from the bottom of the container */
+  left: 73%; /* Distance from the left of the container */
   background-color: #0daa1a; /* Button color */
   color: #ffffff; /* Text color */
   border: none;
-  padding: 5px 2px;
+  padding: 0px 2px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -3782,9 +3649,148 @@ section, .section {
 
 .navlogo{
   position: relative;
-  width: 60%;
+  width: 50%;
   top: 5px;
-  right: 165%;
+  right: 200%;
+}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 425px) {
+  .tab{
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-size: 5px;
+  }
+
+  .middle-text{
+    font-family: 'DroidArabicKufiRegular';
+    font-weight: bold;
+    position: absolute;
+    font-size: 5px;
+    left: 111px;
+    text-align: center;
+    color: #ae0000;
+  
+  }
+
+  .logo-container p{
+    position: relative;
+    margin: 0;
+    font-size: 10px;
+    left: 18px;
+  }
+
+  .logo-container img{
+    position: relative;
+    left: 20px;
+    width: 70%;
+    height: 40%;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  .navmenu a, .navmenu a:focus{
+    position: static;
+  color: var(--nav-dropdown-color);
+  font-family: var(--nav-font);
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+
+  }
+  .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: none;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.upload-trigger {
+  position: relative;
+  left: 117%;
+  border-radius: 15px;
+  background-color: #000000;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 300px; /* Optional: Set a width */
+  height: 300px; /* Optional: Set a height */
+  text-align: center; /* Center text content */
+  display: grid;
+}
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button{
+  background-color: #ffffff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20PX;
+
+    transition: background-color 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  padding: 20px; /* Adds spacing around the button */
+}
+
+.right-button {
+  position: absolute; /* Positioning relative to the container */
+  bottom: -17%; /* Distance from the bottom of the container */
+  left: 73%; /* Distance from the left of the container */
+  background-color: #0daa1a; /* Button color */
+  color: #ffffff; /* Text color */
+  border: none;
+  padding: 0px 2px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right-button:hover {
+  background-color: #74b9fd; /* Darker shade on hover */
+}
+
+.navlogo{
+  position: relative;
+  width: 50%;
+  top: 5px;
+  right: 200%;
 }
 
 
@@ -3797,18 +3803,33 @@ section, .section {
     flex: 1;
     text-align: center;
     position: relative;
-    font-size: 9px;
+    font-size: 5px;
   }
 
   .middle-text{
     font-family: 'DroidArabicKufiRegular';
     font-weight: bold;
-    position: relative;
-    font-size: 15px;
-  
+    position: absolute;
+    font-size: 5px;
+    left: 111px;
     text-align: center;
     color: #ae0000;
   
+  }
+
+  .single-image-container{
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo-container{
+    position: relative;
+    left: 106%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .logo-container p{
@@ -3902,12 +3923,12 @@ section, .section {
 
 .right-button {
   position: absolute; /* Positioning relative to the container */
-  bottom: -32%; /* Distance from the bottom of the container */
-  left: 69%; /* Distance from the left of the container */
+  bottom: -17%; /* Distance from the bottom of the container */
+  left: 73%; /* Distance from the left of the container */
   background-color: #0daa1a; /* Button color */
   color: #ffffff; /* Text color */
   border: none;
-  padding: 5px 2px;
+  padding: 0px 2px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
@@ -3920,9 +3941,9 @@ section, .section {
 
 .navlogo{
   position: relative;
-  width: 73%;
+  width: 102%;
   top: 5px;
-  right: 212%;
+  right: 164%;
 }
 
 
@@ -3946,7 +3967,7 @@ section, .section {
   }
   .logo-container {
     position: relative;
-    left: 64%;
+    left: 82%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -4069,7 +4090,7 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 .right-button {
   position: absolute; /* Positioning relative to the container */
   bottom: -22%; /* Distance from the bottom of the container */
-  left: 79%; /* Distance from the left of the container */
+  left: 74%; /* Distance from the left of the container */
   background-color: #0daa1a; /* Button color */
   color: #ffffff; /* Text color */
   border: none;
@@ -4085,9 +4106,9 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 }
 .navlogo{
   position: relative;
-  width: 60%;
+  width: 47%;
   top: 5px;
-  right: 215%;
+  right: 154%;
 }
 
 
@@ -4554,12 +4575,12 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
   position: relative;
   width: 60%;
   top: 5px;
-  right: 160%;
+  right: 190%;
 }
 
 .logo-container {
   position: relative;
-  left: 75%;
+  left: 93%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4717,7 +4738,7 @@ html:not(.no-js) [data-aos^=zoom][data-aos^=zoom].aos-animate {
 
 .logo-container {
   position: relative;
-  left: 65%;
+  left: 161%;
   display: flex;
   flex-direction: column;
   align-items: center;

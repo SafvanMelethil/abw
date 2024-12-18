@@ -32,44 +32,226 @@
 
 <body class="index-page">
 
-   <!-- Scrolling message -->
-   <div class="scrolling-message">
-    <span>أهلاً بكم في الصفحة الرسمية للمستشار صالح ناصر العبد الواحد</span>
+  <!-- Scrolling message -->
+<div class="scrolling-message">
+  <span>أهلًا وسهلًا بكم هذا الموقع اهداء من المستشار صالح ناصر آل عبدالواحد لقبيلة آل كثير</span>
 </div>
 
 
 
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        
-        <div class="logo-container">
-          <img src="saleh new.jpeg" alt="Logo">
-          <p>المؤسس</p>
-          <p><b> المستشار صالح ناصر ال عبدالواحد</b></p>
-      </div>
-
-      <div class="middle-text">
-        <span>موقع هدية </span>   من المستشار صالح ناصر ال عبدالواحد لقبيلة ال كثير
+<style>
+    /* Basic Navbar Styling */
+    .seebar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        flex-wrap: nowrap; /* Keep content in one line for desktop and tablets */
+    }
+  
+    /* Image Styling with Decent Size */
+    .see-logo img,
+    .center-image img,
+    .log-container img {
+        height: 300px; /* Resize images */
+        width: auto; /* Maintain aspect ratio */
+        display: block;
+        border-radius: 15px; /* Rounded corners for images */
+    }
+  
+    .right-button{
+      left: 100px;
+      width: 150px;
+      position: relative;
+      display: inline-block;
+      background-color: #056518;
+      color: white;
+      font-size: 14px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+  
+    /* Middle Image Centering */
+    .center-image {
+        flex: 1; /* Take up available space */
+        text-align: center;
+    }
+  
+    /* Middle Image Adjustments */
+    .center-image img {
+        display: inline-block;
+        border-radius: 20px;
+        height: 300px;
+        transition: transform 0.5s ease-in-out;
+    }
+  
+    .center-image img:hover {
+        transform: rotate(360deg); /* Full rotation on hover */
+    }
+  
+    /* Logo Container */
+    .log-container {
+        text-align: center;
+    }
+  
+    .log-container img {
+        margin-bottom: 10px;
+    }
+  
+    .log-container .text {
+        font-size: 16px; /* Arabic text size */
+        color: #333;
+        direction: rtl;
+        white-space: nowrap;
+        margin-top: 5px;
+    }
+  
+    /* Button Styling */
+    .log-container .login-button,
+    .see-logo .new-button {
+        display: inline-block;
+        background-color: #056518;
+        color: white;
+        font-size: 14px;  /* Adjust button text size */
+        padding: 8px 15px;
+        border: none;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+  
+    .log-container .login-button:hover,
+    .see-logo .new-button:hover {
+        background-color: #0056b3;
+    }
+  
+    /* Responsive Design (Mobile View Adjustments) */
+    @media (max-width: 768px) {
+        /* Ensuring Navbar is aligned in one line */
+        .seebar {
+            justify-content: center;
+            padding: 10px; /* Adjust padding for smaller screens */
+        }
+  
+        /* Ensure the logo is properly aligned in the center with button */
+        .see-logo {
+            display: flex;
+            flex-direction: column; /* Stack the logo and button vertically */
+            align-items: center;
+            justify-content: center;
+        }
+  
+        .see-logo img {
+            height: 120px; /* Smaller logo size for mobile */
+            margin-bottom: 5px; /* Space between the logo and new button */
+        }
+  
+        .see-logo .new-button {
+            font-size: 12px; /* Smaller button text */
+            padding: 6px 12px; /* Smaller padding */
+        }
+  
+        .center-image img {
+            height: 120px; /* Center image smaller size for mobile */
+            margin-top: 10px; /* Top margin for separation */
+        }
+  
+        /* Adjust the log container for a mobile-friendly layout */
+        .log-container {
+            display: flex;
+            flex-direction: column;  /* Stack text and button vertically */
+            align-items: center;     /* Center elements horizontally */
+            margin-top: 15px;        /* Separation from center image */
+        }
+  
+        .log-container img {
+            height: 80px; /* Smaller image size for mobile */
+            margin-bottom: 5px; /* Space between image and text */
+        }
+  
+        .log-container .text {
+            font-size: 14px; /* Adjust text size for mobile */
+            margin-bottom: 5px;
+            text-align: center; /* Center-align text */
+        }
+  
+        .log-container .login-button {
+            font-size: 12px;
+            padding: 6px 12px; /* Button size adjustments for mobile */
+            margin-top: 5px;
+        }
+    }
+  
+    @media (max-width: 480px) {
+        .seebar {
+            padding: 5px;  /* Adjust padding for smaller mobile screens */
+        }
+  
+        .see-logo img {
+            height: 100px; /* Logo size for very small screens */
+        }
+  
+        .center-image img {
+            height: 100px;  /* Smaller center image size */
+        }
+  
+        .log-container img {
+            height: 60px; /* Smaller log container image */
+        }
+  
+        .log-container .text {
+            font-size: 12px;  /* Small font size for text */
+        }
+  
+        .log-container .login-button {
+            font-size: 10px;
+            padding: 4px 8px;  /* Adjust smaller button size */
+  
+        }
+        .right-button{
+      left: 5px;
+      width: 50px;
+      position: relative;
+      display: inline-block;
+      background-color: #056518;
+      color: white;
+      font-size: 14px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+  
+    }
+  </style>
+  </head>
+  <body>
+  <nav class="seebar">
+    <div class="see-logo">
+        <img src="Artboard 2 co 2.png" alt="see Logo">
+        <a class="right-button" href="ihdafa.pdf">اهدافنا</a> <!-- New Button Below Logo -->
     </div>
-
-    <div>
-      <img class="navlogo" src="Artboard 2 co 2.png" alt="">
+    <div class="center-image">
+        <img src="pexels-enginakyurt-15483696.jpg" alt="center Image">
     </div>
-       
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
-      </a>
-
-      
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        
-      </nav>
-    
-
-  </div>
-</header>
+    <div class="log-container">
+        <img src="saleh new.jpeg" alt="Log Container">
+        <div class="text">المؤسس<br>المستشار صالح ناصر ال عبدالواحد</div>
+        <a class="login-button" href="register.html">تسجيل الدخول</a>  <!-- Login button below text -->
+    </div>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  </nav>
+  
 
 <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
   <div class="container position-relative">
@@ -134,96 +316,73 @@
 <body>
     <div class="container">
        
-      <form id="marriageForm">
-        <div class="form-group">
-            <label for="firstName">الاسم الأول</label>
-            <input type="text" id="firstName" name="first_name" required>
+        <form id="marriageForm">
+            <div class="form-group">
+                <label for="firstName">الاسم الأول</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="fathersName">اسم الأب</label>
+                <input type="text" id="fathersName" name="fathersName" required>
+            </div>
+            <div class="form-group">
+                <label for="grandfathersName">اسم الجد</label>
+                <input type="text" id="grandfathersName" name="grandfathersName" required>
+            </div>
+            <div class="form-group">
+                <label for="thing">الفخذ</label>
+                <input type="text" id="thing" name="thing" required>
+            </div>
+            <div class="form-group">
+              <label for="village">القرية</label>
+              <input type="text" id="village" name="village" required>
+          </div>
+            <div class="form-date">
+                <label for="eventDate">تاريخ المناسبة</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-date">
+              <label for="todayDate">اليوم </label>
+              <input type="date" id="todayDate" name="todayDate" required>
+          </div>
+          <div class="form-group">
+            <label for="cityOfOccassion">مدينة المناسبة </label>
+            <input type="text" id="cityOfOccassion" name="cityOfOccassion" required>
         </div>
         <div class="form-group">
-            <label for="fathersName">اسم الأب</label>
-            <input type="text" id="fathersName" name="fathers_name" required>
-        </div>
-        <div class="form-group">
-            <label for="grandfathersName">اسم الجد</label>
-            <input type="text" id="grandfathersName" name="grandfathers_name" required>
-        </div>
-        <div class="form-group">
-            <label for="thing">الفخذ</label>
-            <input type="text" id="thing" name="thing" required>
-        </div>
-        <div class="form-group">
-          <label for="village">القرية</label>
-          <input type="text" id="village" name="village" required>
-      </div>
-        <div class="form-date">
-            <label for="eventDate">تاريخ المناسبة</label>
-            <input type="date" id="eventDate" name="event_date" required>
-        </div>
-        <div class="form-date">
-          <label for="todayDate">اليوم </label>
-          <input type="date" id="todayDate" name="today_date" required>
+          <label for="hall">اسم القاعة</label>
+          <input type="text" id="hall" name="hall" required>
       </div>
       <div class="form-group">
-        <label for="cityOfOccassion">مدينة المناسبة </label>
-        <input type="text" id="cityOfOccassion" name="city_of_occassion" required>
+        <label for="herAddress">عنوانها</label>
+        <input type="text" id="herAddress" name="herAddress" required>
     </div>
-    <div class="form-group">
-      <label for="hall">اسم القاعة</label>
-      <input type="text" id="hall" name="hall" required>
-  </div>
-  <div class="form-group">
-    <label for="herAddress">عنوانها</label>
-    <input type="text" id="herAddress" name="her_address" required>
-</div>
-        <div class="form-group">
-            <label for="bridesFathersName"> اسم والد العروسالثلاثة</label>
-            <input type="text" id="bridesFathersName" name="brides_fathers_name" required>
-        </div>
-        <div class="form-group">
-          <label for="herVillage">قريته</label>
-          <input type="text" id="herVillage" name="her_village" required>
-      </div>
-
-        <button type="button" class="mbtn" onclick="saveDetails()">حفظ</button>
-    </form>
-</body>
-</html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
- function saveDetails() {
-    const form = $('#marriageForm'); // Use jQuery to select the form
-    const formData = new FormData(form[0]); // Create FormData from the form
-
-    // Get the CSRF token from the meta tag
-    const csrfToken = $('meta[name="csrf-token"]').attr('content');
-
-    $.ajax({
-        url: 'http://127.0.0.1:8000/marriage-form', // API endpoint
-        type: 'POST', // HTTP method
-        data: formData, // Form data to be sent
-        processData: false, // Prevent jQuery from automatically transforming the data
-        contentType: false, // Prevent jQuery from setting a content type
-        headers: {
-            'X-CSRF-TOKEN': csrfToken // Include the CSRF token in the request headers
-        },
-        success: function(response) {
-            if (response.message) {
-                alert(response.message);
-                form[0].reset(); // Clear the form on success
-            } else {
-                alert('Failed to save data.');
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error('Error:', error);
-            alert('An error occurred while saving the form data.');
-        }
-    });
-}
-
-
-
-</script>
+            <div class="form-group">
+                <label for="bridesFathersName"> اسم والد العروسالثلاثة</label>
+                <input type="text" id="bridesFathersName" name="bridesFathersName" required>
+            </div>
+            <div class="form-group">
+              <label for="herVillage">قريته</label>
+              <input type="text" id="herVillage" name="herVillage" required>
+          </div>
+          <input type="submit" value="submit" class="sub" id="submit"> 
+            <!-- <button type="submit" value="submit" id="submit" class="mbtn" onclick="saveDetails()">حفظ</button> -->
+        </form>
+        <!-- <form>
+          <div class="inputbox">
+              <input type="text" value="" id="username" required>
+              <span>username</span>
+          </div>
+          <div class="inputbox">
+              <input type="email" value="" id="email" required>
+              <span>E-mail</span>
+          </div>
+          <div class="inputbox">
+              <input type="text" value="" id="phone" required>
+              <span>Phone Number</span>
+          </div>
+          <input type="submit" value="submit" class="sub" id="submit">
+      </form> -->
     </div>
 
     <script>
@@ -249,6 +408,7 @@
         }
 
         function saveDetails() {
+          
     const form = document.getElementById('marriageForm');
     const details = {
         'الاسم الأول': form.firstName.value,
@@ -312,7 +472,7 @@
 
       <div class="d-flex flex-column align-items-center align-items-lg-start">
         <div>
-          © Copyright <strong><span>Alabdulwahid</span></strong>. All Rights Reserved
+          ©️ Copyright <strong><span>Alabdulwahid</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
          <h6 class="me">designed by <a href="https://bit.ly/SafvanMelethil">Safvan Melethil</a> </h6>
@@ -346,6 +506,54 @@
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC9IlGov2xnVtixf3C3qABVvbbwUucZ2Ic",
+    authDomain: "amrtmdb-6caab.firebaseapp.com",
+    databaseURL: "https://amrtmdb-6caab-default-rtdb.firebaseio.com",
+    projectId: "amrtmdb-6caab",
+    storageBucket: "amrtmdb-6caab.firebasestorage.app",
+    messagingSenderId: "24910552741",
+    appId: "1:24910552741:web:28ab644b8d51872bdc774c"
+  };
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  const db = getDatabase(app);
+  
+  document.getElementById("submit").addEventListener('click', function(e){
+              e.preventDefault();
+              set(ref(db, 'firstName/' + document.getElementById("firstName").value),
+              {
+      firstName: document.getElementById("firstName").value,
+      fathersName: document.getElementById("fathersName").value,
+      grandfathersName: document.getElementById("grandfathersName").value,
+      thing: document.getElementById("thing").value,
+      village: document.getElementById("village").value,
+      eventDate: document.getElementById("eventDate").value,
+      todayDate: document.getElementById("todayDate").value,
+      cityOfOccassion: document.getElementById("cityOfOccassion").value,
+      hall: document.getElementById("hall").value,
+      herAddress: document.getElementById("herAddress").value,
+      bridesFathersName: document.getElementById("bridesFathersName").value,
+      herVillage: document.getElementById("herVillage").value,
+
+              });
+                alert("تمت إضافة الحدث بنجاح.");
+                saveDetails();
+             })
+
+</script> 
+
+
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
