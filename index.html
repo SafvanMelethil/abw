@@ -309,342 +309,557 @@
     </ul>
   </div>
 
-  <style>
-   .lorry-container {
-    padding-top: 100px;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center; /* Center the items */
+  
+
+  
+
+<style>
+  .torry-container {
+   padding-top: 100px;
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   justify-content: center; /* Center the items */
 }
 
-.lorry {
-  display: flex;
-    animation: scroll-right 40s linear infinite; /* Infinite scrolling animation */
-    will-change: transform;  /* Optimize performance */
+.torry {
+ display: flex;
+   animation: scroll-right 40s linear infinite; /* Infinite scrolling animation */
+   will-change: transform;  /* Optimize performance */
 }
 
-.lorry-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    background: #076a38; /* Background for the info box */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 220px; /* Set width to fit content */
-    overflow: hidden; /* Ensures the content stays inside the box */
-    transition: transform 0.3s ease;
+.torry-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 10px;
+   background: #076a38; /* Background for the info box */
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   max-width: 220px; /* Set width to fit content */
+   overflow: hidden; /* Ensures the content stays inside the box */
+   transition: transform 0.3s ease;
 }
 
-.lorry-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+.torry-card img {
+   width: 200px;
+   height: 200px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease;
+   cursor: pointer;
 }
 
-.lorry-card img:hover {
-    transform: scale(1.1);
+.torry-card img:hover {
+   transform: scale(1.1);
 }
 
-.lorry-card .info {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    direction: rtl; /* Right-to-left for Arabic text */
-    font-family: "Arial", sans-serif;
-    color: #ffffff;
-    word-break: break-word; /* Handles overflow of long words */
+.torry-card .info {
+   text-align: center;
+   margin-top: 10px;
+   font-size: 14px;
+   font-weight: bold;
+   direction: rtl; /* Right-to-left for Arabic text */
+   font-family: "Arial", sans-serif;
+   color: #ffffff;
+   word-break: break-word; /* Handles overflow of long words */
 }
 
 /* Keyframes for continuous scrolling */
 @keyframes scroll-right {
-    0% {
-        transform: translateX(0); /* Start from the initial position */
-    }
-    100% {
-        transform: translateX(-100%); /* End at the fully scrolled position */
-    }
+   0% {
+       transform: translateX(0); /* Start from the initial position */
+   }
+   100% {
+       transform: translateX(-100%); /* End at the fully scrolled position */
+   }
 }
 
 /* Stop the scrolling animation only on hover over individual lorry cards */
-.lorry-card:hover {
-    animation-play-state: paused; /* Pause the animation only for the specific card */
+.torry-card:hover {
+   animation-play-state: paused; /* Pause the animation only for the specific card */
 }
 
 /* Responsive fix for small screens */
 @media screen and (max-width: 768px) {
-    .lorry-container {
-        flex-wrap: wrap;
-    }
+   .torry-container {
+       flex-wrap: wrap;
+   }
 
-    .lorry-card {
-        max-width: 100%;
-    }
+   .torry-card {
+       max-width: 100%;
+   }
 }
 
 
-    /* Modal Styles */
-    .Dim {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        padding-top: 60px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+   /* Modal Styles */
+   .tim {
+       display: none;
+       position: fixed;
+       z-index: 1000;
+       padding-top: 60px;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.8);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
 
-    .Dim-content {
-        max-width: 500px;
-        max-height: 500px;
-    }
+   .tim-content {
+       max-width: 500px;
+       max-height: 500px;
+   }
 
-    .Dim-info {
-        color: white;
-        text-align: center;
-        margin-top: 20px;
-        font-size: 18px;
-        font-family: "Arial", sans-serif;
-    }
+   .tim-info {
+       color: white;
+       text-align: center;
+       margin-top: 20px;
+       font-size: 18px;
+       font-family: "Arial", sans-serif;
+   }
 
-    .close {
-        position: absolute;
-        top: 20px;
-        right: 35px;
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+   .close {
+       position: absolute;
+       top: 20px;
+       right: 35px;
+       color: white;
+       font-size: 40px;
+       font-weight: bold;
+       cursor: pointer;
+   }
 
-    .close:hover,
-    .close:focus {
-        color: #ccc;
-    }
-    .vertical-tag {
-    position: absolute; /* Fixed to stay in place */
-    right: 0; /* Align to the right edge */
-    top: 60%; /* Vertically centered */
-    transform: translateY(-50%); /* Center properly */
-    width: 50px; /* Tag width */
-    height: 350px; /* Tag height */
-    background-color: #056518; /* Tag background color */
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 10; /* Ensure it stays above sliding images */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; /* Text color */
-    font-size: 16px;
-    font-weight: bold;
-    writing-mode: vertical-rl; /* Make text vertical */
-    text-orientation: downright;
-    font-family: Arial, sans-serif;
+   .close:hover,
+   .close:focus {
+       color: #ccc;
+   }
+   .vertical-tag {
+   position: absolute; /* Fixed to stay in place */
+   right: 0; /* Align to the right edge */
+   top: 60%; /* Vertically centered */
+   transform: translateY(-50%); /* Center properly */
+   width: 50px; /* Tag width */
+   height: 350px; /* Tag height */
+   background-color: #056518; /* Tag background color */
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   z-index: 10; /* Ensure it stays above sliding images */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white; /* Text color */
+   font-size: 16px;
+   font-weight: bold;
+   writing-mode: vertical-rl; /* Make text vertical */
+   text-orientation: downright;
+   font-family: Arial, sans-serif;
 }
 
+  
+</style>
+
+<div class="torry-container">
+ <div class="vertical-tag">رموز وطن وقبيلة</div>
+ <div class="torry" id="torry">\
    
+ <div class="torry-card">
+   <img src="members/25.jpeg" alt="Certificate 5" onclick="opentim(this,' الدكتور / سعد مستور حيان آل حيان <br>قرية : آل خريم')">
+   <div class="info">الدكتور / سعد مستور حيان آل حيان       <br>قرية : آل خريم    </div>
+</div>
+     <div class="torry-card">
+       <img src="members/24.jpeg" alt="Certificate 5" onclick="opentim(this, 'الاستاذ / علي أحمد عيدان آل عبدالمطلب <br>قرية : الوقر ')">
+       <div class="info">الاستاذ / علي أحمد عيدان آل عبدالمطلب           <br>قرية : الوقر</div>
+   </div>
+     <div class="torry-card">
+       <img src="members/23.jpeg" alt="Certificate 5" onclick="opentim(this, 'العميد /أحمد عوض أحمد آل موسى <br> قرية : آل غراب ')">
+       <div class="info">العميد /أحمد عوض أحمد آل موسى           <br>قرية : آل غراب        </div>
+   </div>
+     <div class="torry-card">
+       <img src="members/10.jpeg" alt="Certificate 5" onclick="opentim(this, 'المدرب الاستاذ / عايض موسى عايض آل موسى <br> قرية : آل غراب' )">
+       <div class="info">المدرب الاستاذ / عايض موسى عايض آل موسى             <br>قرية : آل غراب</div>
+   </div>
+     <div class="torry-card">
+       <img src="members/9.jpeg" alt="Certificate 5" onclick="opentim(this, 'الدكتور / مصلح عايض مصلح آل عيسى <br>قرية : آل غراب')">
+       <div class="info">الدكتور / مصلح عايض مصلح آل عيسى            <br>قرية : آل غراب</div>
+   </div>
+   <div class="torry-card">
+     <img src="members/8.jpeg" alt="Certificate 5" onclick="opentim(this, 'أمام وخطيب جامع آل عتمة الاستاذ / صالح زاهر علوان آل علوان <br>قرية : العتمة')">
+     <div class="info">أمام وخطيب جامع آل عتمة الاستاذ / صالح زاهر علوان آل علوان           <br>قرية : العتمة</div>
+ </div>
+     <div class="torry-card">
+         <img src="members/6.jpeg" alt="Certificate 5" onclick="opentim(this, 'الدكتور / موسى بن غيثان بن أحمد آل محمد<br>قرية آل طارق')">
+         <div class="info">الدكتور / موسى بن غيثان بن أحمد آل محمد<br>قرية آل طارق</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/5.jpeg" alt="Certificate 5" onclick="opentim(this, 'عقيد طيار ركن / مازن عساف مستور آل حيان<br>قرية آل خريم')">
+         <div class="info">عقيد طيار ركن / مازن عساف مستور آل حيان<br>قرية آل خريم</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/4.jpeg" alt="Certificate 5" onclick="opentim(this, 'المهندس / نايف احمد موسى آل بوشمال<br>قرية : آل خريم')">
+         <div class="info">المهندس / نايف احمد موسى آل بوشمال<br>قرية : آل خريم</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/3.jpeg" alt="Certificate 5" onclick="opentim(this, 'اللواء / طلال علي مقيبل ال مداوس<br>قرية : الاصادعة')">
+         <div class="info">اللواء / طلال علي مقيبل ال مداوس<br>قرية : الاصادعة</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/2.jpeg" alt="Certificate 5" onclick="opentim(this, 'الدكتور / محمد علي شعبان آل بوشمال<br>قرية : آل خريم')">
+         <div class="info">الدكتور / محمد علي شعبان آل بوشمال<br>قرية : آل خريم</div>
+     </div>
+     <div class="torry-card">
+       <img src="members/11.jpeg" alt="Certificate 5" onclick="opentim(this, ' الشاعر /عيدان شرقي محمد آل حسن  <br>القرية :الزبيري ')">
+       <div class="info">الشاعر /عيدان شرقي محمد آل حسن           <br>القرية :الزبيري</div>
+   </div>
+     <div class="torry-card">
+         <img src="members/1.jpeg" alt="Certificate 5" onclick="opentim(this, 'القافز الحر مضلي / علي حمدان عايض آل شدنه<br>قرية : الاصادعة')">
+         <div class="info">القافز الحر مضلي / علي حمدان عايض آل شدنه<br>قرية : الاصادعة</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/moosi.jpeg" alt="Certificate 5" onclick="opentim(this, 'اللواء / موسى عوض محمد آل بوشمال<br>قرية : آل خريم')">
+         <div class="info">اللواء / موسى عوض محمد آل بوشمال<br>قرية : آل خريم</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/ahmed.jpeg" alt="Certificate 5" onclick="opentim(this, 'الدكتور احمد عبدالله علي آل بوشمال<br>قرية آل عتمة')">
+         <div class="info">الدكتور احمد عبدالله علي آل بوشمال<br>قرية آل عتمة</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/sayed.jpeg" alt="Certificate 5" onclick="opentim(this, 'الاستاذ / سعيد محمد أحمد ردفان آل جمعان<br>القرية : الاصادعة')">
+         <div class="info">الاستاذ / سعيد محمد أحمد ردفان آل جمعان<br>القرية : الاصادعة</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-14 at 12.03.52.jpeg" alt="Certificate 5" onclick="opentim(this, 'العقيد / مستور محمد حيان آل حيان<br>القرية : آل خريم')">
+         <div class="info">العقيد / مستور محمد حيان آل حيان<br>القرية : آل خريم</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-14 at 01.25.47.jpeg" alt="Certificate 5" onclick="opentim(this, 'عقيد : محمد علي موسى آل موسى<br>قرية : آل طارق')">
+         <div class="info">عقيد : محمد علي موسى آل موسى<br>قرية : آل طارق</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-13 at 20.47.11.jpeg" alt="Certificate 4" onclick="opentim(this, 'اللواء: مصلح غيثان مصلح آل عيسى<br>قرية : آل غراب')">
+         <div class="info">اللواء: مصلح غيثان مصلح آل عيسى<br>قرية : آل غراب</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-13 at 16.02.41.jpeg" alt="Certificate 3" onclick="opentim(this, 'العميد / عبدالله صالح علوان آل علوان<br>قرية : ال عتمه')">
+         <div class="info">العميد / عبدالله صالح علوان آل علوان<br>قرية : ال عتمه</div>
+     </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-13 at 15.24.30.jpeg" alt="Certificate 2" onclick="opentim(this, 'الملازم أول الدكتور خالد صالح على غرم الله الـ محمد<br>قرية : ال عتمة')">
+         <div class="info">الملازم أول الدكتور خالد صالح على غرم الله الـ محمد<br>قرية : ال عتمة</div>
+     </div>
+    
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-13 at 14.31.56.jpeg" alt="Certificate 1" onclick="opentim(this, 'الاستاذ موسى عساف حيان آل حيان<br>قرية : آل خريم')">
+         <div class="info">الاستاذ موسى عساف حيان آل حيان<br>قرية : آل خريم</div>
+     </div>
+     <div class="torry-card">
+       <img src="members/22.jpeg" alt="Certificate 2" onclick="opentim(this, '>الكابتن طيار حربي العميد / عايض بن صالح بن عايض آل بن تركية <br>  صورة مع المغفور له باذن الله الملك  <br>فهد بن عبدالعزيز رحمه الله<br>قرية : إل غراب')">
+       <div class="info">الكابتن طيار حربي العميد /  عايض بن <br> صالح بن عايض آل بن تركية
+         صورة<br> مع المغفور له باذن الله الملك  <br>فهد بن عبدالعزيز رحمه الله<br>قرية : إل غراب</div>
+   </div>
+     <div class="torry-card">
+         <img src="members/WhatsApp Image 2024-12-14 at 11.51.50.jpeg" alt="Certificate 5" onclick="opentim(this, 'الشيخ / محمد أحمد ردفان<br>شيخ قبيلة آل كثير<br>قرية : الاصادعة')">
+         <div class="info">الشيخ / محمد أحمد ردفان<br>شيخ قبيلة آل كثير<br>قرية : الاصادعة</div>
+     </div>
+     
+
+ </div>
+
+</div>
+
+
+
+
+
+<!-- Modal for enlarged image -->
+<div id="imagetim" class="tim" style="display: none;">
+   <span class="close" onclick="closetim()">&times;</span>
+   <img id="timImage" class="tim-content" alt="Enlarged Image" />
+   <div id="timInfo" class="tim-info"></div>
+</div>
+
+
+<script>
+ // Function to open the image in the modal
+ function opentim(imgElement, info) {
+     const tim = document.getElementById("imagetim");
+     const timImg = document.getElementById("timImage");
+     const timInfo = document.getElementById("timInfo");
+
+     tim.style.display = "flex";  // Show the modal
+     timImg.src = imgElement.src;
+     timInfo.innerHTML = info;
+ }
+
+ // Function to close the modal
+ function closetim() {
+     const tim = document.getElementById("imagetim");
+     tim.style.display = "none";
+ }
+
+ // Get the lorry element and set the animation
+ const torry = document.getElementById("torry");
+
+ // Stop scroll when mouse is over an image
+ const torryCards = document.querySelectorAll(".torry-card img");
+ torryCards.forEach(card => {
+     card.addEventListener("mouseover", () => {
+         torry.style.animationPlayState = "paused";  // Stop scrolling
+     });
+
+     card.addEventListener("mouseout", () => {
+         torry.style.animationPlayState = "running";  // Resume scrolling
+     });
+     
+ });
+</script>
+
+
+<style>
+  .lorry-container {
+   padding-top: 100px;
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   justify-content: center; /* Center the items */
+}
+
+.lorry {
+ display: flex;
+   animation: scroll-right 40s linear infinite; /* Infinite scrolling animation */
+   will-change: transform;  /* Optimize performance */
+}
+
+.lorry-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 10px;
+   background: #076a38; /* Background for the info box */
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   max-width: 220px; /* Set width to fit content */
+   overflow: hidden; /* Ensures the content stays inside the box */
+   transition: transform 0.3s ease;
+}
+
+.lorry-card img {
+   width: 200px;
+   height: 200px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease;
+   cursor: pointer;
+}
+
+.lorry-card img:hover {
+   transform: scale(1.1);
+}
+
+.lorry-card .info {
+   text-align: center;
+   margin-top: 10px;
+   font-size: 14px;
+   font-weight: bold;
+   direction: rtl; /* Right-to-left for Arabic text */
+   font-family: "Arial", sans-serif;
+   color: #ffffff;
+   word-break: break-word; /* Handles overflow of long words */
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll-right {
+   0% {
+       transform: translateX(0); /* Start from the initial position */
+   }
+   100% {
+       transform: translateX(-100%); /* End at the fully scrolled position */
+   }
+}
+
+/* Stop the scrolling animation only on hover over individual lorry cards */
+.lorry-card:hover {
+   animation-play-state: paused; /* Pause the animation only for the specific card */
+}
+
+/* Responsive fix for small screens */
+@media screen and (max-width: 768px) {
+   .lorry-container {
+       flex-wrap: wrap;
+   }
+
+   .lorry-card {
+       max-width: 100%;
+   }
+}
+
+
+   /* Modal Styles */
+   .Dim {
+       display: none;
+       position: fixed;
+       z-index: 1000;
+       padding-top: 60px;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.8);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .Dim-content {
+       max-width: 500px;
+       max-height: 500px;
+   }
+
+   .Dim-info {
+       color: white;
+       text-align: center;
+       margin-top: 20px;
+       font-size: 18px;
+       font-family: "Arial", sans-serif;
+   }
+
+   .close {
+       position: absolute;
+       top: 20px;
+       right: 35px;
+       color: white;
+       font-size: 40px;
+       font-weight: bold;
+       cursor: pointer;
+   }
+
+   .close:hover,
+   .close:focus {
+       color: #ccc;
+   }
+   .vertical-tag {
+   position: absolute; /* Fixed to stay in place */
+   right: 0; /* Align to the right edge */
+   top: 60%; /* Vertically centered */
+   transform: translateY(-50%); /* Center properly */
+   width: 50px; /* Tag width */
+   height: 350px; /* Tag height */
+   background-color: #056518; /* Tag background color */
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   z-index: 10; /* Ensure it stays above sliding images */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white; /* Text color */
+   font-size: 16px;
+   font-weight: bold;
+   writing-mode: vertical-rl; /* Make text vertical */
+   text-orientation: downright;
+   font-family: Arial, sans-serif;
+}
+
+  
 </style>
 
 <div class="lorry-container">
-  <div class="vertical-tag">رموز وطن وقبيلة</div>
-  <div class="lorry" id="lorry">
-      <div class="lorry-card">
-          <img src="members/7.jpeg" alt="Certificate 5" onclick="openDim(this, 'الشاعر / رائد عيدان شرقي آل حسن<br>قرية : الزبيري')">
-          <div class="info">الشاعر / رائد عيدان شرقي آل حسن<br>قرية : الزبيري</div>
-      </div>
-      <div class="lorry-card">
-        <img src="members/44.jpeg" alt="Certificate 5" onclick="openDim(this,'الأستاذ / صالح حسين علي آل مشول<br>قرية : آل مشول')">
-        <div class="info">الأستاذ / صالح حسين علي آل مشول          <br>قرية : آل مشول</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/43.jpeg" alt="Certificate 5" onclick="openDim(this,'صالح عساف صالح آل عدوان <br>قرية : الزبيري')">
-        <div class="info">صالح عساف صالح آل عدوان           <br>قرية : الزبيري</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/42.jpeg" alt="Certificate 5" onclick="openDim(this,'رجل الأعمال/ علي هادي محمد آل حبشان<br>قرية : إل حفيش')">
-        <div class="info">رجل الأعمال/ علي هادي محمد آل حبشان          <br>قرية : إل حفيش        </div>
-    </div>
-    <div class="lorry-card">
-      <img src="members/41.jpeg" alt="Certificate 5" onclick="openDim(this,'طيار الاستعراض الجوي  رحال آل كثير /أحمد محمد هدية آل حوته<br>قرية : منيفه')">
-      <div class="info">طيار الاستعراض الجوي  رحال آل كثير / أحمد محمد هدية آل حوته          <br>القرية : آل طارق        </div>
-  </div>
-      <div class="lorry-card">
-        <img src="members/40.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ / عوض صالح علي ال بن محفوظه<br>قرية : آل غراب')">
-        <div class="info">الاستاذ / عوض صالح علي ال بن محفوظه          <br>قرية : آل غراب        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/39.jpeg" alt="Certificate 5" onclick="openDim(this,'سعيد موسى عبدالله جحران ال سعيد <br>القرية ال غراب')">
-        <div class="info">سعيد موسى عبدالله جحران ال سعيد           <br>القرية ال غراب        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/38.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ/ صالح عبدالله محمد آل شهوان <br>قرية : منيفه')">
-        <div class="info">الاستاذ/ صالح عبدالله محمد آل شهوان           <br>قرية : منيفه</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/37.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ / علي عبدالله علي آل عبدالواحد<br>قرية : آل خريم')">
-        <div class="info"> الاستاذ / علي عبدالله علي آل عبدالواحد          <br>قرية : آل خريم        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/36.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ/ حميد صالح عبدالله آل شهوان <br>قرية : آل حفيش')">
-        <div class="info">الاستاذ/ حميد صالح عبدالله آل شهوان           <br>قرية : آل حفيش</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/35.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ / مطلق أحمد عساف آل حيان  <br>قرية : آل خريم')">
-        <div class="info">الاستاذ / مطلق أحمد عساف آل حيان           <br>قرية : آل خريم        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/34.jpeg" alt="Certificate 5" onclick="openDim(this,' المحامي / مراد علي محمد آل سعيد  <br>قرية : آل غراب')">
-        <div class="info">المحامي / مراد علي محمد آل سعيد           <br>قرية : آل غراب        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/33.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ / عايض محمد أحمد ردفان آل جمعان<br>قرية : الاصادعة')">
-        <div class="info">الاستاذ / عايض محمد أحمد ردفان آل جمعان          <br>قرية : الاصادعة</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/32.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / علوان صالح علي آل علوان <br>قرية : العتمة')">
-        <div class="info">الاستاذ / علوان صالح علي آل علوان           <br>قرية : العتمة        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/31.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ/ محمدبن عبد الله ظافر ال ظافر <br>قرية : البخرة')">
-        <div class="info">الاستاذ/ محمدبن عبد الله ظافر ال ظافر           <br>قرية : البخرة</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/30.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / مناع عثمان مثيب آل جمعانة')">
-        <div class="info">الاستاذ / مناع عثمان مثيب آل جمعان الاصادعة<br></div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/29.jpeg" alt="Certificate 5" onclick="openDim(this, 'المحامي / مصعب سعد مستور آل حيان<br>قرية : آل خريم')">
-        <div class="info">المحامي / مصعب سعد مستور آل حيان          <br>قرية : آل خريم</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/28.jpeg" alt="Certificate 5" onclick="openDim(this, 'المهندس / اسامة محمد حاضر آل حيان <br>قرية : آل خريم')">
-        <div class="info">المهندس / اسامة محمد حاضر آل حيان           <br>قرية : آل خريم        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/27.jpeg" alt="Certificate 5" onclick="openDim(this, 'النقيب / عادل عبدالعزيز صالح آل عساف <br>قرية : المرباء')">
-        <div class="info">النقيب / عادل عبدالعزيز صالح آل عساف           <br>قرية : المرباء</div>
-    </div>
-    <div class="lorry-card">
-      <img src="members/26.jpeg" alt="Certificate 5" onclick="openDim(this, 'المحامي / علي طلال علي آل مداوس<br>قرية : الاصادعة')">
-      <div class="info">المحامي / علي طلال علي آل مداوس        <br>قرية : الاصادعة      </div>
-  </div>
-  <div class="lorry-card">
-    <img src="members/25.jpeg" alt="Certificate 5" onclick="openDim(this,' الدكتور / سعد مستور حيان آل حيان <br>قرية : آل خريم')">
-    <div class="info">الدكتور / سعد مستور حيان آل حيان       <br>قرية : آل خريم    </div>
-</div>
-      <div class="lorry-card">
-        <img src="members/24.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / علي أحمد عيدان آل عبدالمطلب <br>قرية : الوقر ')">
-        <div class="info">الاستاذ / علي أحمد عيدان آل عبدالمطلب           <br>قرية : الوقر</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/23.jpeg" alt="Certificate 5" onclick="openDim(this, 'العميد /أحمد عوض أحمد آل موسى <br> قرية : آل غراب ')">
-        <div class="info">العميد /أحمد عوض أحمد آل موسى           <br>قرية : آل غراب        </div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/10.jpeg" alt="Certificate 5" onclick="openDim(this, 'المدرب الاستاذ / عايض موسى عايض آل موسى <br> قرية : آل غراب' )">
-        <div class="info">المدرب الاستاذ / عايض موسى عايض آل موسى             <br>قرية : آل غراب</div>
-    </div>
-      <div class="lorry-card">
-        <img src="members/9.jpeg" alt="Certificate 5" onclick="openDim(this, 'الدكتور / مصلح عايض مصلح آل عيسى <br>قرية : آل غراب')">
-        <div class="info">الدكتور / مصلح عايض مصلح آل عيسى            <br>قرية : آل غراب</div>
-    </div>
-    <div class="lorry-card">
-      <img src="members/8.jpeg" alt="Certificate 5" onclick="openDim(this, 'أمام وخطيب جامع آل عتمة الاستاذ / صالح زاهر علوان آل علوان <br>قرية : العتمة')">
-      <div class="info">أمام وخطيب جامع آل عتمة الاستاذ / صالح زاهر علوان آل علوان           <br>قرية : العتمة</div>
-  </div>
-      <div class="lorry-card">
-          <img src="members/6.jpeg" alt="Certificate 5" onclick="openDim(this, 'الدكتور / موسى بن غيثان بن أحمد آل محمد<br>قرية آل طارق')">
-          <div class="info">الدكتور / موسى بن غيثان بن أحمد آل محمد<br>قرية آل طارق</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/5.jpeg" alt="Certificate 5" onclick="openDim(this, 'عقيد طيار ركن / مازن عساف مستور آل حيان<br>قرية آل خريم')">
-          <div class="info">عقيد طيار ركن / مازن عساف مستور آل حيان<br>قرية آل خريم</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/4.jpeg" alt="Certificate 5" onclick="openDim(this, 'المهندس / نايف احمد موسى آل بوشمال<br>قرية : آل خريم')">
-          <div class="info">المهندس / نايف احمد موسى آل بوشمال<br>قرية : آل خريم</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/3.jpeg" alt="Certificate 5" onclick="openDim(this, 'اللواء / طلال علي مقيبل ال مداوس<br>قرية : الاصادعة')">
-          <div class="info">اللواء / طلال علي مقيبل ال مداوس<br>قرية : الاصادعة</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/2.jpeg" alt="Certificate 5" onclick="openDim(this, 'الدكتور / محمد علي شعبان آل بوشمال<br>قرية : آل خريم')">
-          <div class="info">الدكتور / محمد علي شعبان آل بوشمال<br>قرية : آل خريم</div>
-      </div>
-      <div class="lorry-card">
-        <img src="members/11.jpeg" alt="Certificate 5" onclick="openDim(this, ' الشاعر /عيدان شرقي محمد آل حسن  <br>القرية :الزبيري ')">
-        <div class="info">الشاعر /عيدان شرقي محمد آل حسن           <br>القرية :الزبيري</div>
-    </div>
-      <div class="lorry-card">
-          <img src="members/1.jpeg" alt="Certificate 5" onclick="openDim(this, 'القافز الحر مضلي / علي حمدان عايض آل شدنه<br>قرية : الاصادعة')">
-          <div class="info">القافز الحر مضلي / علي حمدان عايض آل شدنه<br>قرية : الاصادعة</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/moosi.jpeg" alt="Certificate 5" onclick="openDim(this, 'اللواء / موسى عوض محمد آل بوشمال<br>قرية : آل خريم')">
-          <div class="info">اللواء / موسى عوض محمد آل بوشمال<br>قرية : آل خريم</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/ahmed.jpeg" alt="Certificate 5" onclick="openDim(this, 'الدكتور احمد عبدالله علي آل بوشمال<br>قرية آل عتمة')">
-          <div class="info">الدكتور احمد عبدالله علي آل بوشمال<br>قرية آل عتمة</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/sayed.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / سعيد محمد أحمد ردفان آل جمعان<br>القرية : الاصادعة')">
-          <div class="info">الاستاذ / سعيد محمد أحمد ردفان آل جمعان<br>القرية : الاصادعة</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-14 at 12.03.52.jpeg" alt="Certificate 5" onclick="openDim(this, 'العقيد / مستور محمد حيان آل حيان<br>القرية : آل خريم')">
-          <div class="info">العقيد / مستور محمد حيان آل حيان<br>القرية : آل خريم</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-14 at 01.25.47.jpeg" alt="Certificate 5" onclick="openDim(this, 'عقيد : محمد علي موسى آل موسى<br>قرية : آل طارق')">
-          <div class="info">عقيد : محمد علي موسى آل موسى<br>قرية : آل طارق</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-13 at 20.47.11.jpeg" alt="Certificate 4" onclick="openDim(this, 'اللواء: مصلح غيثان مصلح آل عيسى<br>قرية : آل غراب')">
-          <div class="info">اللواء: مصلح غيثان مصلح آل عيسى<br>قرية : آل غراب</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-13 at 16.02.41.jpeg" alt="Certificate 3" onclick="openDim(this, 'العميد / عبدالله صالح علوان آل علوان<br>قرية : ال عتمه')">
-          <div class="info">العميد / عبدالله صالح علوان آل علوان<br>قرية : ال عتمه</div>
-      </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-13 at 15.24.30.jpeg" alt="Certificate 2" onclick="openDim(this, 'الملازم أول الدكتور خالد صالح على غرم الله الـ محمد<br>قرية : ال عتمة')">
-          <div class="info">الملازم أول الدكتور خالد صالح على غرم الله الـ محمد<br>قرية : ال عتمة</div>
-      </div>
-     
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-13 at 14.31.56.jpeg" alt="Certificate 1" onclick="openDim(this, 'الاستاذ موسى عساف حيان آل حيان<br>قرية : آل خريم')">
-          <div class="info">الاستاذ موسى عساف حيان آل حيان<br>قرية : آل خريم</div>
-      </div>
-      <div class="lorry-card">
-        <img src="members/22.jpeg" alt="Certificate 2" onclick="openDim(this, '>الكابتن طيار حربي العميد / عايض بن صالح بن عايض آل بن تركية <br>  صورة مع المغفور له باذن الله الملك  <br>فهد بن عبدالعزيز رحمه الله<br>قرية : إل غراب')">
-        <div class="info">الكابتن طيار حربي العميد /  عايض بن <br> صالح بن عايض آل بن تركية
-          صورة<br> مع المغفور له باذن الله الملك  <br>فهد بن عبدالعزيز رحمه الله<br>قرية : إل غراب</div>
-    </div>
-      <div class="lorry-card">
-          <img src="members/WhatsApp Image 2024-12-14 at 11.51.50.jpeg" alt="Certificate 5" onclick="openDim(this, 'الشيخ / محمد أحمد ردفان<br>شيخ قبيلة آل كثير<br>قرية : الاصادعة')">
-          <div class="info">الشيخ / محمد أحمد ردفان<br>شيخ قبيلة آل كثير<br>قرية : الاصادعة</div>
-      </div>
-      
-
-  </div>
+ <div class="vertical-tag">رموز وطن وقبيلة</div>
+ <div class="lorry" id="lorry">\
+   
+   
+     <div class="lorry-card">
+         <img src="members/7.jpeg" alt="Certificate 5" onclick="openDim(this, 'الشاعر / رائد عيدان شرقي آل حسن<br>قرية : الزبيري')">
+         <div class="info">الشاعر / رائد عيدان شرقي آل حسن<br>قرية : الزبيري</div>
+     </div>
+     <div class="lorry-card">
+       <img src="members/44.jpeg" alt="Certificate 5" onclick="openDim(this,'الأستاذ / صالح حسين علي آل مشول<br>قرية : آل مشول')">
+       <div class="info">الأستاذ / صالح حسين علي آل مشول          <br>قرية : آل مشول</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/43.jpeg" alt="Certificate 5" onclick="openDim(this,'صالح عساف صالح آل عدوان <br>قرية : الزبيري')">
+       <div class="info">صالح عساف صالح آل عدوان           <br>قرية : الزبيري</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/42.jpeg" alt="Certificate 5" onclick="openDim(this,'رجل الأعمال/ علي هادي محمد آل حبشان<br>قرية : إل حفيش')">
+       <div class="info">رجل الأعمال/ علي هادي محمد آل حبشان          <br>قرية : إل حفيش        </div>
+   </div>
+   <div class="lorry-card">
+     <img src="members/41.jpeg" alt="Certificate 5" onclick="openDim(this,'طيار الاستعراض الجوي  رحال آل كثير /أحمد محمد هدية آل حوته<br>قرية : منيفه')">
+     <div class="info">طيار الاستعراض الجوي  رحال آل كثير / أحمد محمد هدية آل حوته          <br>القرية : آل طارق        </div>
+ </div>
+     <div class="lorry-card">
+       <img src="members/40.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ / عوض صالح علي ال بن محفوظه<br>قرية : آل غراب')">
+       <div class="info">الاستاذ / عوض صالح علي ال بن محفوظه          <br>قرية : آل غراب        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/39.jpeg" alt="Certificate 5" onclick="openDim(this,'سعيد موسى عبدالله جحران ال سعيد <br>القرية ال غراب')">
+       <div class="info">سعيد موسى عبدالله جحران ال سعيد           <br>القرية ال غراب        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/38.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ/ صالح عبدالله محمد آل شهوان <br>قرية : منيفه')">
+       <div class="info">الاستاذ/ صالح عبدالله محمد آل شهوان           <br>قرية : منيفه</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/37.jpeg" alt="Certificate 5" onclick="openDim(this,'الاستاذ / علي عبدالله علي آل عبدالواحد<br>قرية : آل خريم')">
+       <div class="info"> الاستاذ / علي عبدالله علي آل عبدالواحد          <br>قرية : آل خريم        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/36.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ/ حميد صالح عبدالله آل شهوان <br>قرية : آل حفيش')">
+       <div class="info">الاستاذ/ حميد صالح عبدالله آل شهوان           <br>قرية : آل حفيش</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/35.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ / مطلق أحمد عساف آل حيان  <br>قرية : آل خريم')">
+       <div class="info">الاستاذ / مطلق أحمد عساف آل حيان           <br>قرية : آل خريم        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/34.jpeg" alt="Certificate 5" onclick="openDim(this,' المحامي / مراد علي محمد آل سعيد  <br>قرية : آل غراب')">
+       <div class="info">المحامي / مراد علي محمد آل سعيد           <br>قرية : آل غراب        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/33.jpeg" alt="Certificate 5" onclick="openDim(this,' الاستاذ / عايض محمد أحمد ردفان آل جمعان<br>قرية : الاصادعة')">
+       <div class="info">الاستاذ / عايض محمد أحمد ردفان آل جمعان          <br>قرية : الاصادعة</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/32.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / علوان صالح علي آل علوان <br>قرية : العتمة')">
+       <div class="info">الاستاذ / علوان صالح علي آل علوان           <br>قرية : العتمة        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/31.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ/ محمدبن عبد الله ظافر ال ظافر <br>قرية : البخرة')">
+       <div class="info">الاستاذ/ محمدبن عبد الله ظافر ال ظافر           <br>قرية : البخرة</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/30.jpeg" alt="Certificate 5" onclick="openDim(this, 'الاستاذ / مناع عثمان مثيب آل جمعانة')">
+       <div class="info">الاستاذ / مناع عثمان مثيب آل جمعان الاصادعة<br></div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/29.jpeg" alt="Certificate 5" onclick="openDim(this, 'المحامي / مصعب سعد مستور آل حيان<br>قرية : آل خريم')">
+       <div class="info">المحامي / مصعب سعد مستور آل حيان          <br>قرية : آل خريم</div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/28.jpeg" alt="Certificate 5" onclick="openDim(this, 'المهندس / اسامة محمد حاضر آل حيان <br>قرية : آل خريم')">
+       <div class="info">المهندس / اسامة محمد حاضر آل حيان           <br>قرية : آل خريم        </div>
+   </div>
+     <div class="lorry-card">
+       <img src="members/27.jpeg" alt="Certificate 5" onclick="openDim(this, 'النقيب / عادل عبدالعزيز صالح آل عساف <br>قرية : المرباء')">
+       <div class="info">النقيب / عادل عبدالعزيز صالح آل عساف           <br>قرية : المرباء</div>
+   </div>
+   <div class="lorry-card">
+     <img src="members/26.jpeg" alt="Certificate 5" onclick="openDim(this, 'المحامي / علي طلال علي آل مداوس<br>قرية : الاصادعة')">
+     <div class="info">المحامي / علي طلال علي آل مداوس        <br>قرية : الاصادعة      </div>
+ </div>
  
+
+ </div>
+
 </div>
 
 
@@ -653,46 +868,49 @@
 
 <!-- Modal for enlarged image -->
 <div id="imageDim" class="Dim" style="display: none;">
-    <span class="close" onclick="closeDim()">&times;</span>
-    <img id="DimImage" class="Dim-content" alt="Enlarged Image" />
-    <div id="DimInfo" class="Dim-info"></div>
+   <span class="close" onclick="closeDim()">&times;</span>
+   <img id="DimImage" class="Dim-content" alt="Enlarged Image" />
+   <div id="DimInfo" class="Dim-info"></div>
 </div>
 
 
 <script>
-  // Function to open the image in the modal
-  function openDim(imgElement, info) {
-      const Dim = document.getElementById("imageDim");
-      const DimImg = document.getElementById("DimImage");
-      const DimInfo = document.getElementById("DimInfo");
+ // Function to open the image in the modal
+ function openDim(imgElement, info) {
+     const Dim = document.getElementById("imageDim");
+     const DimImg = document.getElementById("DimImage");
+     const DimInfo = document.getElementById("DimInfo");
 
-      Dim.style.display = "flex";  // Show the modal
-      DimImg.src = imgElement.src;
-      DimInfo.innerHTML = info;
-  }
+     Dim.style.display = "flex";  // Show the modal
+     DimImg.src = imgElement.src;
+     DimInfo.innerHTML = info;
+ }
 
-  // Function to close the modal
-  function closeDim() {
-      const Dim = document.getElementById("imageDim");
-      Dim.style.display = "none";
-  }
+ // Function to close the modal
+ function closeDim() {
+     const Dim = document.getElementById("imageDim");
+     Dim.style.display = "none";
+ }
 
-  // Get the lorry element and set the animation
-  const lorry = document.getElementById("lorry");
+ // Get the lorry element and set the animation
+ const lorry = document.getElementById("lorry");
 
-  // Stop scroll when mouse is over an image
-  const lorryCards = document.querySelectorAll(".lorry-card img");
-  lorryCards.forEach(card => {
-      card.addEventListener("mouseover", () => {
-          lorry.style.animationPlayState = "paused";  // Stop scrolling
-      });
+ // Stop scroll when mouse is over an image
+ const lorryCards = document.querySelectorAll(".lorry-card img");
+ lorryCards.forEach(card => {
+     card.addEventListener("mouseover", () => {
+         lorry.style.animationPlayState = "paused";  // Stop scrolling
+     });
 
-      card.addEventListener("mouseout", () => {
-          lorry.style.animationPlayState = "running";  // Resume scrolling
-      });
-      
-  });
+     card.addEventListener("mouseout", () => {
+         lorry.style.animationPlayState = "running";  // Resume scrolling
+     });
+     
+ });
 </script>
+
+
+
 
 
 
